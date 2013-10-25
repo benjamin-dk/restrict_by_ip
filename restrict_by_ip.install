@@ -37,6 +37,7 @@ function restrict_by_ip_uninstall() {
   }
   // Clean up role-based variables
   db_query("DELETE FROM {variable} WHERE name LIKE 'restrict_by_ip_role%'");
+  db_query("DELETE FROM {variable} WHERE name LIKE 'restrict_by_ip_set_role%'");
 
   drupal_set_message(t('Restrict Logon By IP module uninstalled successfully.'));
 }
